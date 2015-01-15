@@ -1,0 +1,25 @@
+{
+  "name": "sukimajs",
+  "version": "1.0.0",
+  "description": "A schema creator and validator.",
+  "main": "index.js",
+  "dependencies": { "validator": "3.27.0" },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "chai-as-promised": "^4.1.1",
+    "mocha": "^2.1.0"
+  },
+  "scripts": { "test": "mocha test/ --ui bdd --reporter spec -r test/helpers/setup -w -G" },
+  "keywords": [
+    "schema",
+    "validator"
+  ],
+  "author": "Sergio Daniel Xalambrí <sergio@xalambri.com.ar> (http://sergio.xalambri.com.ar/)",
+  "license": "MIT",
+  "bugs": { "url": "https://github.com/sergiodxa/SukimaJS/issues" },
+  "homepage": "http://sergiodxa.github.io/SukimaJS/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergiodxa/SukimaJS.git"
+  }
+}
