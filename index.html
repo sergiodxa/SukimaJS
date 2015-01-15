@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Sukimajs by sergiodxa</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Sukimajs</h1>
+        <p class="header">A schema creator and validator</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/sergiodxa/SukimaJS/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/sergiodxa/SukimaJS/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/sergiodxa/SukimaJS">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/sergiodxa">sergiodxa</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="sukimajs" class="anchor" href="#sukimajs" aria-hidden="true"><span class="octicon octicon-link"></span></a>SukimaJS</h1>
+
+<p>A schema creator and validator.</p>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<p>Use NPM to install with the command:</p>
+
+<pre><code>npm i -S sukimajs
+</code></pre>
+
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use</h2>
+
+<p>Import SukimaJS inside your JS file using:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> sukimajs <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>sukimajs<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>Create your Schema:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> User <span class="pl-k">=</span> sukimajs.register({
+  name <span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>alphanumeric<span class="pl-pds">'</span></span>,
+  pass <span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>base64<span class="pl-pds">'</span></span>,
+  email<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>email<span class="pl-pds">'</span></span>
+});</pre></div>
+
+<p>Validate data using the validate method:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> data <span class="pl-k">=</span> {
+  name<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>sukima<span class="pl-pds">'</span></span>,
+  pass<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>cGFzc3dvcmQqMTIz<span class="pl-pds">'</span></span>,
+  email<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>sukima@gmail.com<span class="pl-pds">'</span></span>
+}
+<span class="pl-s">var</span> valid <span class="pl-k">=</span> User.validate(data);</pre></div>
+
+<p>If the data are valid the valid variable will be true, else the variable valid will be an array of errors.</p>
+
+<p>If you want to use it in browser just compile it using Browserify to create a browser compatible JS file.</p>
+
+<p>Enjoy!</p>
+
+<h3>
+<a id="possible-validations" class="anchor" href="#possible-validations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Possible validations</h3>
+
+<ul>
+<li>email</li>
+<li>url</li>
+<li>domain</li>
+<li>ip</li>
+<li>alpha</li>
+<li>number</li>
+<li>alphanumeric</li>
+<li>base64</li>
+<li>hexadecimal</li>
+<li>hexcolor</li>
+<li>int</li>
+<li>float</li>
+<li>null</li>
+<li>uuid</li>
+<li>date</li>
+<li>creditcard</li>
+<li>isbn</li>
+<li>mobilephone</li>
+<li>json</li>
+<li>ascii</li>
+<li>mongoid</li>
+</ul>
+
+<p>If you set a type different to these you always will get false.</p>
+
+<h2>
+<a id="tests" class="anchor" href="#tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tests</h2>
+
+<p>To do test just use the command:</p>
+
+<pre><code>npm test
+</code></pre>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) 2015 Sergio Daniel Xalambrí</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-48432002-5");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
