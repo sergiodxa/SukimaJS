@@ -6,7 +6,7 @@
     <title>Sukimajs by sergiodxa</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
@@ -48,24 +48,24 @@
 
 <p>Import SukimaJS inside your JS file using:</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> sukimajs <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>sukimajs<span class="pl-pds">'</span></span>);</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> sukimajs <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>sukimajs<span class="pl-pds">'</span></span>);</pre></div>
 
 <p>Create your Schema:</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> User <span class="pl-k">=</span> sukimajs.register({
-  name <span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>alphanumeric<span class="pl-pds">'</span></span>,
-  pass <span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>base64<span class="pl-pds">'</span></span>,
-  email<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>email<span class="pl-pds">'</span></span>
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> User <span class="pl-k">=</span> sukimajs.register({
+  name <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>alphanumeric<span class="pl-pds">'</span></span>,
+  pass <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>base64<span class="pl-pds">'</span></span>,
+  email<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>email<span class="pl-pds">'</span></span>
 });</pre></div>
 
 <p>Validate data using the validate method:</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> data <span class="pl-k">=</span> {
-  name<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>sukima<span class="pl-pds">'</span></span>,
-  pass<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>cGFzc3dvcmQqMTIz<span class="pl-pds">'</span></span>,
-  email<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>sukima@gmail.com<span class="pl-pds">'</span></span>
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> data <span class="pl-k">=</span> {
+  name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>sukima<span class="pl-pds">'</span></span>,
+  pass<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>cGFzc3dvcmQqMTIz<span class="pl-pds">'</span></span>,
+  email<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>sukima@gmail.com<span class="pl-pds">'</span></span>
 }
-<span class="pl-s">var</span> valid <span class="pl-k">=</span> User.validate(data);</pre></div>
+<span class="pl-k">var</span> valid <span class="pl-k">=</span> User.validate(data);</pre></div>
 
 <p>If the data are valid the valid variable will be true, else the variable valid will be an array of errors.</p>
 
@@ -136,7 +136,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.</p>
       </section>
       <footer>
-        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
@@ -146,7 +146,7 @@ SOFTWARE.</p>
           </script>
           <script type="text/javascript">
             try {
-              var pageTracker = _gat._getTracker("UA-48432002-5");
+              var pageTracker = _gat._getTracker("UA-48432002-3");
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
